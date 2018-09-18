@@ -5,17 +5,21 @@ To run execute `npm install` then `npm start`. The server will run. Navigate in 
 
 To get user, execute:
 
+```
 query getUser {
   user(id: "31ce0260-2c23-4be5-ab78-4a5d1603cbc8"){
   	name 
   }
 }
+```
 
 To update user, execute:
 
+```
 mutation updateUser {
   user(id: "31ce0260-2c23-4be5-ab78-4a5d1603cbc8", name: "Markus") {
     id
     name
   }
 }
+```
