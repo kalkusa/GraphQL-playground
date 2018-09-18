@@ -39,6 +39,7 @@ var mutationType = new graphql.GraphQLObjectType({
       resolve: function(parent, { id, name }) {
         var index = _.findIndex(inMemoryDatabase, { id: id });
         inMemoryDatabase.splice(index, 1, { id: id, name: name });
+        return _.find(inMemoryDatabase, { id: id });
       }
     }
   }
